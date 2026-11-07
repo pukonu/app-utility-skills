@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: triage-page-for-existing-table
+expected_outcome: |
+  The response builds a triage surface on top of an existing feedback table in a
+  multi-tenant Rails app: an internal page listing notes from every account newest first
+  with screenshot, kind and status pills, rating, comment, screen and route, sender and
+  account, app version and platform; status and kind filters with counts beside each
+  option; buttons to change the status to planned, done, wont_do or back to open; the
+  cross-account read kept narrow rather than disabling scoping globally; a status change
+  that is validated (unknown status rejected, unknown id a not-found), audited with the old
+  and new status, and masks sender email for non-admin staff; screenshot links that are
+  short-lived; and request specs covering listing, filters, masking, status change with
+  audit, and authentication.

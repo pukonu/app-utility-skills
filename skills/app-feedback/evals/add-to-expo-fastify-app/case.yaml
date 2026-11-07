@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: add-to-expo-fastify-app
+expected_outcome: |
+  The response adds an end-to-end feedback mechanism to an Expo + Fastify + Prisma project:
+  a Prisma model (or migration) for feedback entries with screen, route, kind, screenshot
+  reference, rating, comment, app version, platform, status and created_at; a root-layout
+  feedback button that hides itself, captures a screenshot before opening a sheet, records
+  the current path and route pattern, defaults kind to "change", requires a comment or a
+  rating, and queues entries that cannot be sent; a POST endpoint that accepts a batch,
+  validates fields and checks the screenshot file is uploaded; and a CLI or admin listing
+  that prints notes newest first with their screenshots. The sender and timestamps come from
+  the server, not the client.

@@ -1,0 +1,14 @@
+schema_version: "1.1"
+name: web-app-feedback-widget-no-screenshot
+expected_outcome: |
+  The response adds a light feedback mechanism to a single-tenant Next.js app: a Drizzle
+  table of feedback entries (screen path, route pattern or path, kind, rating, comment,
+  app version, platform "web", status, created_at, user id from the session, nullable
+  screenshot reference), a corner button in the root layout that opens a small form with
+  comment first, a problem/change/idea choice and an optional 1-5 rating, requiring a
+  comment or a rating; a route handler that validates and inserts with the user from the
+  session; and an owner-only page listing notes newest first with status filters and a way
+  to mark each planned, done or won't do. It records the path at the moment the form opens,
+  either skips screenshots cleanly (nullable column kept) or offers an optional DOM
+  capture, and does not add tenant isolation or cross-tenant functions the app does not
+  need.
